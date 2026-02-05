@@ -1,7 +1,9 @@
 body {
-    background-color: #0d1117; /* Dark Tech Blue */
+    background-color: #0d1117; /* GitHub Dark Theme */
     color: #c9d1d9;
     font-family: 'Courier New', monospace;
+    margin: 0;
+    line-height: 1.6;
 }
 
 nav ul {
@@ -10,9 +12,15 @@ nav ul {
     background: #161b22;
     padding: 15px;
     list-style: none;
+    border-bottom: 2px solid #238636;
 }
 
-a { color: #238636; text-decoration: none; } /* Finance Green */
-a:hover { color: #3fb950; text-shadow: 0 0 5px #3fb950; }
+a { color: #238636; text-decoration: none; font-weight: bold; }
+a:hover { color: #3fb950; text-shadow: 0 0 8px #3fb950; }
 
-#hero { text-align: center; padding: 50px; }
+.container { padding: 40px; max-width: 900px; margin: auto; }
+header { text-align: center; padding: 50px 20px; border-bottom: 1px solid #30363d; }
+h1, h2 { color: #3fb950; }
+.project-card { background: #161b22; border: 1px solid #30363d; padding: 20px; margin: 10px 0; border-radius: 5px; }
+input, textarea { width: 100%; padding: 10px; background: #0d1117; color: white; border: 1px solid #238636; margin: 10px 0; }
+button { background: #238636; color: white; border: none; padding: 10px 20px; cursor: pointer; }
