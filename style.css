@@ -1,0 +1,18 @@
+body {
+    background-color: #0d1117; /* Dark Tech Blue */
+    color: #c9d1d9;
+    font-family: 'Courier New', monospace;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    background: #161b22;
+    padding: 15px;
+    list-style: none;
+}
+
+a { color: #238636; text-decoration: none; } /* Finance Green */
+a:hover { color: #3fb950; text-shadow: 0 0 5px #3fb950; }
+
+#hero { text-align: center; padding: 50px; }
