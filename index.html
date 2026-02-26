@@ -1,26 +1,1951 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Samwel Wambuu | Finance & Cybersec Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samwel Mbugua | Software Developer</title>
+  <style>
+    :root {
+      --black: #000000;
+      --dark-bg: #1a1a1a;
+      --grey-light: #333333;
+      --grey-medium: #444444;
+      --grey-dark: #222222;
+      --white: #ffffff;
+      --orange: #FF6B35;
+      --orange-hover: #ff7d4a;
+    }
+
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+
+    html { 
+      scroll-behavior: smooth; 
+    }
+
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* --- NAVIGATION --- */
+    nav {
+      background: var(--dark-bg);
+      border-bottom: 3px solid var(--orange);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 20px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      background-color: var(--orange);
+      color: var(--black);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+    }
+
+    /* --- HERO --- */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 48px 80px;
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark-bg) 100%);
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 22px);
+      color: var(--white);
+      font-weight: 400;
+      margin-bottom: 40px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .hero-sub strong { 
+      color: var(--orange); 
+      font-weight: 600; 
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      font-family: inherit;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--black);
+      border: none;
+    }
+
+    .btn-primary:hover { 
+      background: var(--orange-hover); 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+    }
+
+    .btn-outline:hover { 
+      background: var(--orange);
+      color: var(--black);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 2px solid var(--orange);
+      flex-wrap: wrap;
+    }
+
+    .stat-val {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--orange);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--grey-light);
+      margin-top: 4px;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 48px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      color: var(--orange);
+      letter-spacing: -1px;
+      margin-bottom: 48px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+      color: var(--white);
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: var(--white);
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    /* --- ABOUT --- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .about-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      background: var(--grey-light);
+      border: 1px solid var(--grey-medium);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .info-icon {
+      color: var(--orange);
+      font-size: 18px;
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .info-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--grey-medium);
+    }
+
+    .info-val {
+      color: var(--white);
+      margin-top: 2px;
+      font-size: 13px;
+    }
+
+    .info-val a { 
+      color: var(--orange); 
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* --- SKILLS --- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-category {
+      background: var(--grey-light);
+      border: 1px solid var(--grey-medium);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      border-left: 4px solid var(--orange-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(255, 107, 53, 0.2);
+    }
+
+    .skill-category-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--grey-medium);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      background: var(--dark-bg);
+      border: 1px solid var(--orange);
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 0.5px;
+    }
+
+    .soft-skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .soft-skill-item {
+      padding: 12px 16px;
+      background: var(--dark-bg);
+      border-left: 3px solid var(--orange);
+      font-size: 12px;
+      color: var(--white);
+    }
+
+    /* --- PROJECTS --- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--grey-light);
+      border: 1px solid var(--grey-medium);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      border-left: 4px solid var(--orange-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(255, 107, 53, 0.2);
+    }
+
+    .project-num {
+      font-size: 11px;
+      color: var(--grey-medium);
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--white);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* --- EDUCATION & CERTS --- */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--orange), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 48px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background: var(--orange);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--orange);
+    }
+
+    .timeline-date {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item h4 {
+      font-size: 14px;
+      color: var(--orange);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .timeline-item p {
+      color: var(--white);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* --- CONTACT --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .contact-info p {
+      margin-bottom: 32px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--grey-light);
+      border: 1px solid var(--grey-medium);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: var(--white);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      background: var(--dark-bg);
+      border: 2px solid var(--grey-medium);
+      border-radius: 4px;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 13px;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+    }
+
+    form input::placeholder, form textarea::placeholder { 
+      color: var(--grey-medium); 
+    }
+
+    form textarea { 
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: var(--orange);
+      color: var(--black);
+      border: none;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: var(--orange-hover); 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      border-top: 3px solid var(--orange);
+      padding: 32px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      background: var(--dark-bg);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--grey-light);
+      margin: 0;
+    }
+
+    /* --- DIVIDER --- */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--orange);
+      margin: 0;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 20px; }
+      
+      nav ul {
+        gap: 15px;
+        padding: 15px;
+      }
+      
+      nav a {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+      
+      header {
+        padding: 40px 20px;
+      }
+      
+      header h1 {
+        font-size: 32px;
+      }
+      
+      .container {
+        padding: 40px 15px;
+      }
+      
+      .project-card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="childhood.html">Background</a></li>
-            <li><a href="education.html">Academic</a></li>
-            <li><a href="skills.html">Fin-Tech Stack</a></li>
-            <li><a href="future.html">Aspirations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <header id="hero">
-        <h1>Samwel Mbugua Wambuu</h1>
-        <p>Software Engineer | Cybersec Professional | Stock Analyst</p>
-    </header>
-    <script src="script.js"></script>
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div id="hero">
+    <p class="hero-label">Available for opportunities</p>
+    <h1>Samwel<br>Mbugua</h1>
+    <p class="hero-sub">
+      <strong>Software Developer</strong> specializing in secure, scalable backends, full-stack web systems, and cybersecurity fundamentals. Based in Nairobi, Kenya.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <a href="https://github.com/DeeCruzz254" target="_blank" class="btn btn-outline">GitHub ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">3+</div>
+        <div class="stat-label">Production Projects</div>
+      </div>
+      <div>
+        <div class="stat-val">MERN</div>
+        <div class="stat-label">Primary Stack</div>
+      </div>
+      <div>
+        <div class="stat-val">JWT</div>
+        <div class="stat-label">Auth Specialist</div>
+      </div>
+      <div>
+        <div class="stat-val">BSc</div>
+        <div class="stat-label">Software Engineering</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">01 — Profile</p>
+    <h2>Building secure systems,<br>one commit at a time.</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a passionate software engineer currently pursuing a BSc in Software Engineering at Kirinyaga University. I build secure, production-ready web applications with a strong focus on authentication, authorization, and scalable backend architecture.</p>
+        <p>From payment gateway integrations to real-time communication systems, my work sits at the intersection of fintech, cybersecurity, and modern full-stack development. I aim to architect zero-trust platforms that are both resilient and developer-friendly.</p>
+        <p>When I'm not writing code, I'm exploring cryptographic concepts, studying system architecture patterns, or working toward my next certification.</p>
+      </div>
+      <div class="about-info">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-val">Nairobi, Kenya</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📧</div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-val"><a href="mailto:Samuelwagithomo@gmail.com">Samuelwagithomo@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val">0768 649 998</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🐙</div>
+          <div>
+            <div class="info-label">GitHub</div>
+            <div class="info-val"><a href="https://github.com/DeeCruzz254" target="_blank">DeeCruzz254</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌐</div>
+          <div>
+            <div class="info-label">Portfolio</div>
+            <div class="info-val"><a href="https://digitalportfolio7.vercel.app/" target="_blank">digitalportfolio7.vercel.app</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">02 — Technical Arsenal</p>
+    <h2>Stack & Capabilities</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="skill-category-title">⚡ Frontend</div>
+        <div class="skill-tags">
+          <span class="tag">React.js</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🖥️ Backend</div>
+        <div class="skill-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">WebSockets</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🗄️ Databases</div>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Query Optimization</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🔐 Security</div>
+        <div class="skill-tags">
+          <span class="tag">JWT Auth</span>
+          <span class="tag">RBAC</span>
+          <span class="tag">Password Hashing</span>
+          <span class="tag">Cryptography</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">☁️ DevOps & Cloud</div>
+        <div class="skill-tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Virtual Machines</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🧠 Soft Skills</div>
+        <div class="soft-skill-grid">
+          <div class="soft-skill-item">Problem Solving</div>
+          <div class="soft-skill-item">Analytical Thinking</div>
+          <div class="soft-skill-item">Communication</div>
+          <div class="soft-skill-item">Team Collaboration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">03 — Project Experience</p>
+    <h2>What I've Built</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-num">01 / Backend Developer</div>
+        <h3>Auth & Authorization System</h3>
+        <p>Secure authentication system with login, registration, and protected routes. Implements JWT-based auth, RBAC, and REST API security best practices with full session management.</p>
+        <div class="project-stack">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">JWT</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02 / Full-Stack Developer</div>
+        <h3>Student Records Management</h3>
+        <p>Secure web platform for managing student academic records. Teachers upload documents, students access results — with role-based auth, SQL optimization, and containerized deployment.</p>
+        <div class="project-stack">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03 / Full-Stack Developer</div>
+        <h3>Payment Gateway Integration</h3>
+        <p>Full-cycle integration of secure payment rails into frontend applications, connecting real-world fintech APIs with robust error handling and transaction security.</p>
+        <div class="project-stack">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04 / Backend Developer</div>
+        <h3>Bulk SMS & Email Engine</h3>
+        <p>High-throughput notification system for corporate-scale messaging. Engineered for deliverability and speed with queue management and third-party API integrations.</p>
+        <div class="project-stack">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">05 / Technical Research</div>
+        <h3>Real-Time Communication System</h3>
+        <p>Studied and built WebSocket-based real-time messaging. Explored cryptographic concepts for secure data transmission and implemented core cybersecurity design patterns.</p>
+        <div class="project-stack">
+          <span class="tag">WebSockets</span>
+          <span class="tag">Cryptography</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <p class="section-label">04 — Academic & Credentials</p>
+    <h2>Education & Certifications</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Current — Ongoing</div>
+        <h3>Bachelor of Science — Software Engineering</h3>
+        <h4>Kirinyaga University</h4>
+        <p>Focusing on system architecture, cybersecurity protocols, algorithmic logic, and full-stack development. Building production-grade projects alongside coursework.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Certification</div>
+        <h3>Software Development Bootcamp</h3>
+        <h4>Power Learn Project Africa (PLP)</h4>
+        <p>Intensive training in modern web development, collaborative engineering practices, and building production-ready applications from concept to deployment.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Certification</div>
+        <h3>Entry-Level Cybersecurity Certification</h3>
+        <h4>Crybarry Cybersecurity</h4>
+        <p>Foundational training in cybersecurity concepts, secure coding, threat assessment, and network security protocols.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">05 — Contact</p>
+    <h2>Let's Build Something</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>I'm open to freelance projects, full-time roles, and collaborations in backend development, fintech systems, and cybersecurity. Let's connect.</p>
+        <div class="contact-links">
+          <a href="mailto:Samuelwagithomo@gmail.com" class="contact-link">
+            <div class="contact-link-icon">📧</div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-val">Samuelwagithomo@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+254768649998" class="contact-link">
+            <div class="contact-link-icon">📱</div>
+            <div>
+              <div class="contact-link-label">Phone</div>
+              <div class="contact-link-val">+254 768 649 998</div>
+            </div>
+          </a>
+          <a href="https://github.com/DeeCruzz254" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-val">DeeCruzz254</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Samwel Mbugua Wambuu — Nairobi, Kenya</p>
+    <p>Built with HTML · CSS · JS — No frameworks needed.</p>
+  </footer>
+
+  <script>
+    // Form submit
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#FF6B35';
+      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+    });
+
+    // Scroll reveal
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.style.opacity = '1';
+          el.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.skill-category, .project-card, .timeline-item, .info-row').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      scrollObserver.observe(el);
+    });
+
+    // Active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`nav a[href="#${id}"]`);
+        if (link) {
+          link.style.color = scrollY >= top && scrollY < bottom ? '#FF6B35' : '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* --- NOISE TEXTURE OVERLAY --- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* --- GRID BACKGROUND --- */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0,212,170,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,170,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: rgba(5,10,14,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo span { color: var(--accent2); }
+
+    nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    /* --- HERO --- */
+    #hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 48px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 800;
+      color: var(--heading);
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+
+    h1 .highlight {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--accent);
+    }
+
+    .hero-sub {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(16px, 2.5vw, 22px);
+      color: var(--muted);
+      font-weight: 400;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero-sub strong { color: var(--accent2); font-weight: 600; }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+    }
+
+    .btn-primary:hover { background: #00f5c4; transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .btn-outline:hover { background: rgba(0,212,170,0.08); transform: translateY(-2px); }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-val {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 48px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      color: var(--heading);
+      letter-spacing: -1px;
+      margin-bottom: 48px;
+    }
+
+    /* --- ABOUT --- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .about-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .info-icon {
+      color: var(--accent);
+      font-size: 18px;
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .info-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .info-val {
+      color: var(--heading);
+      margin-top: 2px;
+      font-size: 13px;
+    }
+
+    .info-val a { color: var(--accent2); text-decoration: none; }
+
+    /* --- SKILLS --- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-category {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .skill-category:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .skill-category-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 11px;
+      color: var(--text);
+      letter-spacing: 0.5px;
+    }
+
+    .tag.accent { border-color: rgba(0,212,170,0.3); color: var(--accent); }
+    .tag.blue { border-color: rgba(0,150,255,0.3); color: var(--accent2); }
+    .tag.orange { border-color: rgba(255,107,53,0.3); color: var(--accent3); }
+
+    /* Soft skills special styling */
+    .soft-skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .soft-skill-item {
+      padding: 12px 16px;
+      background: var(--surface2);
+      border-left: 3px solid var(--accent);
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    /* --- PROJECTS --- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover::before { transform: scaleX(1); }
+
+    .project-card:hover {
+      border-color: rgba(0,212,170,0.3);
+      transform: translateY(-4px);
+    }
+
+    .project-num {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* --- EDUCATION & CERTS --- */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 48px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .timeline-date {
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item h4 {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--accent2);
+      margin-bottom: 12px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* --- CONTACT --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .contact-link-icon {
+      font-size: 20px;
+      width: 36px;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    .contact-link-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .contact-link-val {
+      font-size: 13px;
+      color: var(--heading);
+      margin-top: 2px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--heading);
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      transition: border-color 0.2s;
+      resize: vertical;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    form input::placeholder, form textarea::placeholder { color: var(--muted); }
+    form textarea { min-height: 120px; }
+
+    /* --- FOOTER --- */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--accent);
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+    }
+
+    #hero { animation: fadeUp 0.8s ease both; }
+    .about-grid { animation: fadeUp 0.8s ease 0.1s both; }
+
+    /* Glow orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.12;
+    }
+
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: var(--accent);
+      top: -150px;
+      right: -100px;
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent2);
+      bottom: 20%;
+      left: -100px;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      nav ul { gap: 16px; }
+      #hero, section { padding-left: 24px; padding-right: 24px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">SM<span>.</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div id="hero">
+    <h1>Samwel<br><span class="highlight">Mbugua</span></h1>
+    <p class="hero-sub">
+      <strong>Software Developer</strong> specializing in secure, scalable backends, full-stack web systems, and cybersecurity fundamentals. Based in Nairobi, Kenya.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <a href="https://github.com/DeeCruzz254" target="_blank" class="btn btn-outline">GitHub ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">3+</div>
+        <div class="stat-label">Production Projects</div>
+      </div>
+      <div>
+        <div class="stat-val">MERN</div>
+        <div class="stat-label">Primary Stack</div>
+      </div>
+      <div>
+        <div class="stat-val">JWT</div>
+        <div class="stat-label">Auth Specialist</div>
+      </div>
+      <div>
+        <div class="stat-val">BSc</div>
+        <div class="stat-label">Software Engineering</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">01 — Profile</p>
+    <h2>Building secure systems,<br>one commit at a time.</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a passionate software engineer currently pursuing a BSc in Software Engineering at Kirinyaga University. I build secure, production-ready web applications with a strong focus on authentication, authorization, and scalable backend architecture.</p>
+        <p>From payment gateway integrations to real-time communication systems, my work sits at the intersection of fintech, cybersecurity, and modern full-stack development. I aim to architect zero-trust platforms that are both resilient and developer-friendly.</p>
+        <p>When I'm not writing code, I'm exploring cryptographic concepts, studying system architecture patterns, or working toward my next certification.</p>
+      </div>
+      <div class="about-info">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-val">Nairobi, Kenya</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📧</div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-val"><a href="mailto:Samuelwagithomo@gmail.com">Samuelwagithomo@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val">0768 649 998</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🐙</div>
+          <div>
+            <div class="info-label">GitHub</div>
+            <div class="info-val"><a href="https://github.com/DeeCruzz254" target="_blank">DeeCruzz254</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌐</div>
+          <div>
+            <div class="info-label">Portfolio</div>
+            <div class="info-val"><a href="https://digitalportfolio7.vercel.app/" target="_blank">digitalportfolio7.vercel.app</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">02 — Technical Arsenal</p>
+    <h2>Stack & Capabilities</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="skill-category-title">⚡ Frontend</div>
+        <div class="skill-tags">
+          <span class="tag accent">React.js</span>
+          <span class="tag">JavaScript (ES6+)</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🖥️ Backend</div>
+        <div class="skill-tags">
+          <span class="tag accent">Node.js</span>
+          <span class="tag accent">Express.js</span>
+          <span class="tag blue">RESTful API Design</span>
+          <span class="tag">WebSockets</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🗄️ Databases</div>
+        <div class="skill-tags">
+          <span class="tag blue">MySQL</span>
+          <span class="tag blue">PostgreSQL</span>
+          <span class="tag blue">MongoDB</span>
+          <span class="tag">DB Design & Indexing</span>
+          <span class="tag">Query Optimization</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🔐 Security</div>
+        <div class="skill-tags">
+          <span class="tag orange">JWT Auth</span>
+          <span class="tag orange">RBAC</span>
+          <span class="tag orange">Password Hashing</span>
+          <span class="tag">Secure System Architecture</span>
+          <span class="tag">Cryptographic Fundamentals</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">☁️ DevOps & Cloud</div>
+        <div class="skill-tags">
+          <span class="tag blue">Docker</span>
+          <span class="tag blue">Kubernetes</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Hostinger</span>
+          <span class="tag">Virtual Machines</span>
+          <span class="tag">Caching & Performance</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-title">🧠 Soft Skills</div>
+        <div class="soft-skill-grid">
+          <div class="soft-skill-item">Problem Solving</div>
+          <div class="soft-skill-item">Analytical Thinking</div>
+          <div class="soft-skill-item">Attention to Detail</div>
+          <div class="soft-skill-item">Self-Directed Learning</div>
+          <div class="soft-skill-item">Communication</div>
+          <div class="soft-skill-item">Team Collaboration</div>
+          <div class="soft-skill-item">Adaptability</div>
+          <div class="soft-skill-item">Time Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">03 — Project Experience</p>
+    <h2>What I've Built</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-num">01 / Backend Developer</div>
+        <h3>Auth & Authorization System</h3>
+        <p>Secure authentication system with login, registration, and protected routes. Implements JWT-based auth, RBAC, and REST API security best practices with full session management.</p>
+        <div class="project-stack">
+          <span class="tag accent">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag orange">JWT</span>
+          <span class="tag blue">MongoDB</span>
+          <span class="tag blue">MySQL</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02 / Full-Stack Developer</div>
+        <h3>Student Records Management</h3>
+        <p>Secure web platform for managing student academic records. Teachers upload documents, students access results — with role-based auth, SQL optimization, and containerized deployment.</p>
+        <div class="project-stack">
+          <span class="tag accent">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag blue">MySQL</span>
+          <span class="tag blue">Docker</span>
+          <span class="tag orange">JWT</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03 / Full-Stack Developer</div>
+        <h3>Payment Gateway Integration</h3>
+        <p>Full-cycle integration of secure payment rails into frontend applications, connecting real-world fintech APIs with robust error handling and transaction security.</p>
+        <div class="project-stack">
+          <span class="tag accent">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag orange">Secure APIs</span>
+          <span class="tag blue">REST</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04 / Backend Developer</div>
+        <h3>Bulk SMS & Email Engine</h3>
+        <p>High-throughput notification system for corporate-scale messaging. Engineered for deliverability and speed with queue management and third-party API integrations.</p>
+        <div class="project-stack">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag blue">MongoDB</span>
+          <span class="tag accent">Queue Systems</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">05 / Technical Research</div>
+        <h3>Real-Time Communication System</h3>
+        <p>Studied and built WebSocket-based real-time messaging. Explored cryptographic concepts for secure data transmission and implemented core cybersecurity design patterns.</p>
+        <div class="project-stack">
+          <span class="tag accent">WebSockets</span>
+          <span class="tag orange">Cryptography</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Secure Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <p class="section-label">04 — Academic & Credentials</p>
+    <h2>Education & Certifications</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Current — Ongoing</div>
+        <h3>Bachelor of Science — Software Engineering</h3>
+        <h4>Kirinyaga University</h4>
+        <p>Focusing on system architecture, cybersecurity protocols, algorithmic logic, and full-stack development. Building production-grade projects alongside coursework.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Certification</div>
+        <h3>Software Development Bootcamp</h3>
+        <h4>Power Learn Project Africa (PLP)</h4>
+        <p>Intensive training in modern web development, collaborative engineering practices, and building production-ready applications from concept to deployment.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Certification</div>
+        <h3>Entry-Level Cybersecurity Certification</h3>
+        <h4>Crybarry Cybersecurity</h4>
+        <p>Foundational training in cybersecurity concepts, secure coding, threat assessment, and network security protocols.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">05 — Contact</p>
+    <h2>Let's Build Something</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>I'm open to freelance projects, full-time roles, and collaborations in backend development, fintech systems, and cybersecurity. Let's connect.</p>
+        <div class="contact-links">
+          <a href="mailto:Samuelwagithomo@gmail.com" class="contact-link">
+            <div class="contact-link-icon">📧</div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-val">Samuelwagithomo@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+254768649998" class="contact-link">
+            <div class="contact-link-icon">📱</div>
+            <div>
+              <div class="contact-link-label">Phone</div>
+              <div class="contact-link-val">+254 768 649 998</div>
+            </div>
+          </a>
+          <a href="https://github.com/DeeCruzz254" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-val">DeeCruzz254</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Samwel Mbugua Wambuu — Nairobi, Kenya</p>
+    <p>Built with HTML · CSS · JS — No frameworks needed.</p>
+  </footer>
+
+  <script>
+    // Form submit
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#00d4aa';
+      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.style.opacity = '1';
+          el.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.skill-category, .project-card, .timeline-item, .info-row').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+
+    // Active nav highlight
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      document.querySelectorAll('section[id]').forEach(section => {
+        const top = section.offsetTop - 100;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`nav a[href="#${id}"]`);
+        if (link) {
+          link.style.color = scrollY >= top && scrollY < bottom ? 'var(--accent)' : '';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
